@@ -1,15 +1,7 @@
 # Time calculator function
-def time_calculator(part_of_the_day,
-                    hour_1,
-                    minute_1,
-                    hour_2,
-                    minute_2,
-                    day=None):
+def time_calculator(part_of_the_day, hour_1, minute_1, hour_2, minute_2, day=None):
   # Attributes
-  list_of_days = [
-    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
-    "Sunday"
-  ]
+  list_of_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   day_match_index = 0
   potd = ""  # Part of the day
   actual_day = ""
@@ -79,7 +71,5 @@ def add_time(starting_time, added_time, current_day=None):
   added_time = added_time.split(':')
 
   # Return new time
-  time = time_calculator(starting_time[1][0], starting_time[0][0],
-                         starting_time[0][1], added_time[0], added_time[1],
-                         current_day)
+  time = time_calculator(starting_time[1][0], starting_time[0][0], starting_time[0][1], added_time[0], added_time[1], current_day)
   return time
