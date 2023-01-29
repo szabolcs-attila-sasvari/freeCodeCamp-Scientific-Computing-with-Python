@@ -1,20 +1,15 @@
-# Define the commonly used symbols as global variables
 plus_symbol = '+'
 minus_symbol = '-'
 space_symbol = ' '
 
 
-# Arithmetic arranger function
 def arithmetic_arranger(problems, solution=False):
-  # Attributes
   problems_with_components = []
   problem = ""
 
-  # Check the number of problems
   if 5 < len(problems):
     return "Error: Too many problems."
 
-  # Split the problems into components and check the digits' validity
   for element in problems:
     operation = minus_symbol
     if not element.__contains__('+') and not element.__contains__('-'):
@@ -32,7 +27,6 @@ def arithmetic_arranger(problems, solution=False):
     current.append(operation)
     problems_with_components.append(current)
 
-  # Return the solution
   limit = lambda x: 4 if solution else 3
   for i in range(0, limit(solution)):
     if i != 0:
