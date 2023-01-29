@@ -1,11 +1,9 @@
-# Define the commonly used symbols as global variables
 space_char = ' '
 minus_char = '-'
 o_char = 'o'
 star_char = '*'
 
 
-# Category class
 class Category:
     def __init__(self, given_type):
         self.ledger = []
@@ -56,7 +54,6 @@ class Category:
             return True
 
 
-# Create spend chart function
 def create_spend_chart(categories):
     chart = "Percentage spent by category\n"
     withdraws = []
