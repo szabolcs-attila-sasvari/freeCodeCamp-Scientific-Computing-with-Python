@@ -5,8 +5,7 @@ def time_calculator(part_of_the_day, hour_1, minute_1, hour_2, minute_2, day=Non
   actual_day = ""
 
   if (part_of_the_day == "PM"):
-    m = (
-      (12 + int(hour_1) + int(hour_2)) * 60) + (int(minute_1) + int(minute_2))
+    m = ((12 + int(hour_1) + int(hour_2)) * 60) + (int(minute_1) + int(minute_2))
     h = (m - (m % 60)) / 60
     d = (h - (h % 24)) / 24
     m = (m % 60)
